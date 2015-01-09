@@ -1,0 +1,8 @@
+task :default => :test
+
+desc 'Run tests'
+task :test do
+  require File.expand_path("./test/helper", File.dirname(__FILE__))
+
+  Dir["test/**/*_test.rb"].each { |file| load file }
+end
