@@ -3,7 +3,7 @@ Gem::Specification.new do |s|
   s.version     = '0.0.1'
   s.date        = Time.now.strftime('%Y-%m-%d')
   s.summary     = 'DSL to define State Machines'
-  s.description = 'Aquam adds a DSL and validations to define a State Machine'
+  s.description = 'A Ruby DSL for writing Finite State Machines and validate its transitions'
   s.authors     = ['Emiliano Mancuso']
   s.email       = ['emiliano.mancuso@gmail.com']
   s.homepage    = 'http://github.com/emancu/aquam'
