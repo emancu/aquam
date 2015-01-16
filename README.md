@@ -8,7 +8,7 @@ A Ruby DSL for writing Finite State Machines and validate its transitions'
 
 ## Dependencies
 
-`aquam` requires Ruby 2.x or later. No more dependencies.
+`aquam` requires Ruby 2.1.x or later. No more dependencies.
 
 ## Installation
 
