@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'aquam'
-  s.version     = '0.0.1'
+  s.version     = '0.0.2'
   s.date        = Time.now.strftime('%Y-%m-%d')
   s.summary     = 'DSL to define State Machines'
   s.description = 'A Ruby DSL for writing Finite State Machines and validate its transitions'
