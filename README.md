@@ -1,5 +1,5 @@
 # aquam
-[![Gem Version](https://badge.fury.io/rb/aquam.png)](http://badge.fury.io/rb/aquam)
+[![Gem Version](https://badge.fury.io/rb/aquam.svg)](http://badge.fury.io/rb/aquam)
 [![Build Status](https://travis-ci.org/emancu/aquam.svg)](https://travis-ci.org/emancu/aquam)
 [![Code Climate](https://codeclimate.com/github/emancu/aquam/badges/gpa.svg)](https://codeclimate.com/github/emancu/aquam)
 [![Dependency Status](https://gemnasium.com/emancu/aquam.svg)](https://gemnasium.com/emancu/aquam)
