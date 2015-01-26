@@ -124,18 +124,17 @@ And for **instance methods** it defines:
 
 ## State
 
-First, we define a base class for the state.
-Every bit of behavior that is *state-dependent* becomes a method in the base class.
-Then, for each state, we define a class that implements the corresponding _events_.
+For each state, we define a class that implements the corresponding _events_.
+Every bit of behavior that is *state-dependent* should become a method in the class.
+`aquam` uses metaprogramming to define methods for every single event listed
+in the state machine used.
 
 ### Example
 
 ```ruby
-class DoorState < Aquam::State
-  state_machine DoorStateMachine
-end
+class OpenedDoorState < Aquam::State
+  use_machine DoorStateMachine
 
-class OpenedDoorState < DoorState
   def close
     # Do something
 
@@ -143,7 +142,9 @@ class OpenedDoorState < DoorState
   end
 end
 
-class ClosedDoorState < DoorState
+class ClosedDoorState < Aquam::State
+  use_machine DoorStateMachine
+
   def open
     # Do something
 
@@ -152,13 +153,13 @@ class ClosedDoorState < DoorState
 end
 ```
 
-### state_machine
+### use_machine
 
-This is the only method that you **must** call from your base State class,
+This is the only method that you **must** call from every State class,
 in order to define the interface according to the _state machine_.
 Basically, it defines a method for every event defined in the _state machine_.
 
 ```ruby
-state_machine DoorStateMachine
+use_machine DoorStateMachine
 ```
 > NOTE: You can not change its value and it is accessible from all subclasses.
