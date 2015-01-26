@@ -1,14 +1,12 @@
 require 'aquam'
 
-class DoorState < Aquam::State; end
-
-class OpenedDoorState < DoorState
+class OpenedDoorState < Aquam::State
   def close
     @object.state = :closed
   end
 end
 
-class ClosedDoorState < DoorState
+class ClosedDoorState < Aquam::State
   def open
     @object.state = :opened
   end
